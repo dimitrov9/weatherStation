@@ -1,1 +1,56 @@
+﻿.cityName{
+    font-size:30px;
+}
+.btn-locate{
+}
+.details-info{
+    float:right;
+}
+.details-unit{
+    float:right;
+}
 
+#ul-details li {
+    list-style: none;
+    border-bottom: dotted;
+    border-bottom-width: 1px;
+    padding: 10px;
+}
+#ul-details{
+    padding-left:0px;
+}
+
+#wind ul li {
+
+    float:right;
+
+}
+#wind ul {
+    display: inline-grid;
+    width: 60%;
+    float:right;
+}
+
+#ul-details #wind {
+    border: none;
+}
+.btn-locate{
+    margin-top:20px;
+}
+
+.current-temp span {
+    font-size: 70px;
+}
+
+.left-bottom{
+    bottom:0px;
+}
+.max,.min{
+    padding-left:30px;
+}
+.map img{
+    width:100%;
+}
+.details-unit{
+    padding-left:3px;
+}
