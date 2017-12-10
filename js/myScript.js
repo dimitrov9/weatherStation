@@ -90,3 +90,33 @@ $('#btn-locate').on('click', function (event) {
 $(function () {
     getLocation();
 })
+
+
+var citiesNames = new Array();
+Object.keys(cities).forEach(function (key) {
+    //get the value of name
+    var val = cities[key]["name"];
+    //push the name string in the array
+    citiesNames.push(val);
+});
+
+$('#search-input').autocomplete({
+    source: function (request, response) {
+        var results = $.ui.autocomplete.filter(citiesNames, request.term);
+        if (results.length > 10) {
+            response(results.slice(0, 10));
+        } else {
+            response(results);
+        }
+
+    },
+    minLength: 4,
+    delay: 400,
+    select: function (event, ui) {
+        // To be searched with ID for more precision
+        var index = citiesNames.indexOf(ui.item.value);
+        //console.log(cities[index].id);
+    }
+});
+
+
